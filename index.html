@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>FLAGLE COPY</title>
 </head>
 <body>
+    <div class="popup">
+        <p>Game over</p>
+        <p>score</p>
+        <p id="finalScore">999</p>
+        <button id="playAgain" onclick="game()">Play Again</button>
+    </div>
     <header>
         <h1>flagle</h1>
     </header>
     <main>
+        <div class="score">
+            <p id="score">Score: 0</p>
+        </div>
+        <div class="buttons">
+                <button id="startButton" onclick="game()">Start</button>
+        </div>
         <div class="image">
-            <div class="overlay-blocks">
+            <div class="overlay-blocks" id="overlay-blocks">
                 <div class="overlay-block" ></div>
                 <div class="overlay-block" ></div>
                 <div class="overlay-block" ></div>
@@ -21,10 +36,10 @@
                 <div class="overlay-block" ></div>
                 <div class="overlay-block" ></div>
             </div>
-            <img src="" alt="there should be a flag" id="countryFlag">
+            <img alt="" id="countryFlag">
         </div>
         <div class="input">
-            <input list="browsers" name="browser" id="userInput" onchange="getValue()">
+            <input list="browsers" name="browser" id="userInput" onchange="getValue()" placeholder="Guess the country!">
             <datalist id="browsers">
             </datalist>
         </div>

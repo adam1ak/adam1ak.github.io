@@ -1,3 +1,7 @@
+*{
+    color: #FAF9F6;
+    font-family: 'Afacad', sans-serif;
+}
 body{
     width: 100%;
     min-height: 100vh;
@@ -10,6 +14,8 @@ header{
     width: 100%;
     padding: 12px 0;
     text-transform: uppercase;
+    border-bottom: 4px solid #2a2a2b;
+    margin-bottom: 10px;
 }
 main{
     display: flex;
@@ -19,19 +25,118 @@ main{
 }
 h1{
     color: white;
+    font-family: 'Afacad', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 img{
     width: 400px;
     height: 250px;
     object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    column-gap: 10px;
+}
+button{
+    background-color: transparent;
+    border: 2px solid #2a2a2b;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+button:nth-of-type(1):hover{
+    background-color: #386641;
+    transform: scale(1.1);
+}
+button:nth-of-type(2):hover{
+    background-color: #184E77;
+    transform: scale(1.1);
 }
 input{
     text-transform: capitalize;
+    background-color: transparent;
+    border: 2px solid #2a2a2b;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+input::placeholder{
+    text-align: center;
+}
+.popup{
+    font-family: 'Afacad', sans-serif;
+    z-index: 999999;
+    display: flex;
+    position: fixed;
+    background-color: #121213;
+    width: 250px;
+    padding: 30px 40px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 30%;
+    border-radius: 8px;
+    display: none;
+    text-align: center;
+    border: 1px solid #2a2a2b;
+}
+.popup p:nth-of-type(1){
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: #bc4749;
+    letter-spacing: 2px;
+}
+.popup p:nth-of-type(2){
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: #6c6c6e;
+    letter-spacing: 2px;
+}
+.popup p:nth-of-type(3){
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FAF9F6;
+    letter-spacing: 2px;
+}
+.popup button{
+    background-color: transparent;
+    border: 2px solid #2a2a2b;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.popup button:hover{
+    background-color: #386641;
+    transform: scale(1.1);
 }
 .image {
     position: relative;
 }
-
+.score p{
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
 .overlay-blocks {
     display: flex;
     flex-wrap: wrap;
@@ -40,13 +145,44 @@ input{
     left: 0;
     width: 400px;
     height: 250px;
+    opacity: 0;
 }
 li{
-    color: white;
+    margin: 5px;
+    text-align: center;
+    list-style: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background-color: #2a2a2b;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 .overlay-block {
-    background-color: gray;
+    background-color: #2a2a2b;
     border: 1px solid #121213;
     width: 131.3px; 
     height: 125px;
+}
+@keyframes goodPulse {
+    0% {
+      color: #386641;
+    }
+    50%{
+      opacity: 0;
+    }
+    100% {
+      color: #386641;
+    }
+}
+@keyframes badPulse {
+    0% {
+      color: #bc4749;
+    }
+    50%{
+      opacity: 0;
+    }
+    100% {
+      color: #bc4749;
+    }
+    
 }
