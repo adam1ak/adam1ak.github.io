@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>FLAGLE COPY</title>
+</head>
+<body>
+    <header>
+        <h1>flagle</h1>
+    </header>
+    <main>
+        <div class="image">
+            <div class="overlay-blocks">
+                <div class="overlay-block" ></div>
+                <div class="overlay-block" ></div>
+                <div class="overlay-block" ></div>
+                <div class="overlay-block" ></div>
+                <div class="overlay-block" ></div>
+                <div class="overlay-block" ></div>
+            </div>
+            <img src="" alt="there should be a flag" id="countryFlag">
+        </div>
+        <div class="input">
+            <input list="browsers" name="browser" id="userInput" onchange="getValue()">
+            <datalist id="browsers">
+            </datalist>
+        </div>
+        <div class="used-countries">
+            <ol id="usedWords"></ol>
+        </div>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>

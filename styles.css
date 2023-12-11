@@ -1,0 +1,52 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121213;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    text-transform: uppercase;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    color: white;
+}
+img{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+input{
+    text-transform: capitalize;
+}
+.image {
+    position: relative;
+}
+
+.overlay-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 250px;
+}
+li{
+    color: white;
+}
+.overlay-block {
+    background-color: gray;
+    border: 1px solid #121213;
+    width: 131.3px; 
+    height: 125px;
+}
